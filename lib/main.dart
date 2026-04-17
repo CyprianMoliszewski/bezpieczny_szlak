@@ -1,6 +1,15 @@
-import 'package:flutter/material.dart';
+import 'dart:developer';
 
-void main() {
+import 'package:flutter/material.dart';
+import 'core/database/database_init.dart';
+
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+
+  final dbInit = DatabaseInit();
+  await dbInit.init();
+  log("Database connection set");
+
   runApp(const MyApp());
 }
 
