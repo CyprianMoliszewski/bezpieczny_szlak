@@ -5,18 +5,6 @@ import 'package:flutter/services.dart' show rootBundle;
 
 class DatabaseInit{
   ///
-  /// SINGLETON
-  ///
-  static Database? _database;
-
-  Future<Database> get database async {
-    if (_database != null) return _database!;
-
-    _database = await init();
-    return _database!;
-  }
-
-  ///
   /// INIT FUNCTION - RETURNS DB OBCJET AND CREATE IT IF NOT EXIST
   ///
   Future<Database> init() async{

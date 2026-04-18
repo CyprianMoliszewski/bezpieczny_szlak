@@ -1,13 +1,12 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'core/database/database_init.dart';
+import 'package:bezpieczny_szlak/core/database/database_init.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
 
-  final dbInit = DatabaseInit();
-  await dbInit.init();
+  await DatabaseInit().init();
   log("Database connection set");
 
   runApp(const MyApp());
